@@ -49,12 +49,19 @@ class MeetingRecordingsController < ApplicationController
     def meeting_recording_params
         params.require(:meeting_recording).permit(:title, :thumbnail_url, :recording_page_url)
     end
-    private
 
     def validate_pagination_params
-        page = params[:page].to_i
-        page_size = params[:pageSize].to_i
-        if page < 1 || page_size < 1 || limit > 100
+        page = params[:page]
+        page_size = params[:pageSize]
+
+        # Return early if neither parameter is present
+        return unless page.present? || page_size.present?
+
+        # Convert to integer only if present
+        page = page.to_i if page.present?
+        page_size = page_size.to_i if page_size.present?
+
+        if page && (page < 1 || page_size < 1 || page_size > 100)
             render json: { error: "Invalid pagination parameters." }, status: :bad_request
         end
     end
