@@ -62,7 +62,7 @@ gem "devise", "~> 4.9"
 
 gem "kaminari", "~> 1.2"
 
-gem "faker", "= 2.20"
+gem "faker", "3.5.1"
 
 gem "annotate", "~> 3.2"
 
