@@ -3,22 +3,37 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+To get a copy of this project up and running on your local machine, follow these steps:
 
-* System dependencies
+1. **Install Dependencies**  
+   Run the following command to install the required gems:
+   ```bash
+   bundle install
+   ```
 
-* Configuration
+2. **Database Setup**  
+   Set up the database by running:
+   ```bash
+   rails db:create
+   rails db:migrate
+   ```
 
-* Database creation
+3. **Database Setup**  
+   Seed Database:
+   ```bash
+   rails db:seed
+   ```
 
-* Database initialization
+4. **Run the Application**  
+   Start the Rails server with:
+   ```bash
+   rails server
+   ```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+5. **Access the Application**  
+   Open your web browser and go to `http://localhost:3000`.
+   You can login with the help of seeded users:
+   email: alice@example.com
+   password: password123
