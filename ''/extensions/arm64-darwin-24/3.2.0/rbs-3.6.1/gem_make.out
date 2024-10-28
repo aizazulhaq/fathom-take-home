@@ -1,0 +1,29 @@
+current directory: /Users/aizazulhaq/Codebase/fathom-ruby-take-home/''/gems/rbs-3.6.1/ext/rbs_extension
+/Users/aizazulhaq/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+/Users/aizazulhaq/.rbenv/versions/3.2.2/bin/ruby: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+checking for whether -std=gnu99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /Users/aizazulhaq/Codebase/fathom-ruby-take-home/''/gems/rbs-3.6.1/ext/rbs_extension
+make DESTDIR\= sitearchdir\=./.gem.20241026-66632-5hg8ev sitelibdir\=./.gem.20241026-66632-5hg8ev clean
+
+current directory: /Users/aizazulhaq/Codebase/fathom-ruby-take-home/''/gems/rbs-3.6.1/ext/rbs_extension
+make DESTDIR\= sitearchdir\=./.gem.20241026-66632-5hg8ev sitelibdir\=./.gem.20241026-66632-5hg8ev
+compiling constants.c
+compiling lexer.c
+compiling lexstate.c
+compiling location.c
+compiling main.c
+compiling parser.c
+compiling parserstate.c
+compiling ruby_objs.c
+compiling unescape.c
+linking shared-object rbs_extension.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/aizazulhaq/Codebase/fathom-ruby-take-home/''/gems/rbs-3.6.1/ext/rbs_extension
+make DESTDIR\= sitearchdir\=./.gem.20241026-66632-5hg8ev sitelibdir\=./.gem.20241026-66632-5hg8ev install
+/opt/homebrew/bin/ginstall -c -m 0755 rbs_extension.bundle ./.gem.20241026-66632-5hg8ev
+
+current directory: /Users/aizazulhaq/Codebase/fathom-ruby-take-home/''/gems/rbs-3.6.1/ext/rbs_extension
+make DESTDIR\= sitearchdir\=./.gem.20241026-66632-5hg8ev sitelibdir\=./.gem.20241026-66632-5hg8ev clean

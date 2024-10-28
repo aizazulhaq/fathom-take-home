@@ -1,0 +1,2 @@
+module MeetingRecordingsHelper
+end

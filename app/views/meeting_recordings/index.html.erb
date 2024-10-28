@@ -1,0 +1,31 @@
+<!-- app/views/meeting_recordings/index.html.erb -->
+<h1 class="text-3xl font-bold text-center my-4">Meeting Recordings</h1>
+
+<div class="container mx-auto">
+  <div id="recordings-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <% if @meeting_recordings.any? %>
+      <% @meeting_recordings.each do |recording| %>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="<%= recording.thumbnail_url %>" class="w-full h-32 object-cover" alt="<%= recording.title %>" />
+          <div class="p-4">
+            <h5 class="text-lg font-semibold">
+              <a href="<%= recording.recording_page_url %>" class="text-blue-500 hover:underline"><%= recording.title %></a>
+            </h5>
+            <!-- {{ edit_1 }} -->
+            <p class="text-sm text-gray-600"><%= recording.created_at.strftime("%B %d, %Y") %></p>
+            <!-- {{ edit_1 }} -->
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p class="text-center">No recordings found.</p>
+    <% end %>
+  </div>
+</div>
+<script>
+  function toggleDetails(id) {
+    const details = document.getElementById(`details-${id}`);
+    details.classList.toggle('hidden');
+  }
+</script>
+

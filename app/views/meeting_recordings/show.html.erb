@@ -1,0 +1,5 @@
+<!-- app/views/meeting_recordings/show.html.erb -->
+<h1><%= @meeting_recording.title %></h1>
+<img src="<%= @meeting_recording.thumbnail_url %>" alt="<%= @meeting_recording.title %>" />
+<p>Recording Page URL: <a href="<%= @meeting_recording.recording_page_url %>"><%= @meeting_recording.recording_page_url %></a></p>
+<p>Created At: <%= @meeting_recording.created_at.strftime("%B %d, %Y %H:%M") %></p>
